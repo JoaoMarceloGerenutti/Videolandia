@@ -1,0 +1,245 @@
+﻿body {
+    margin: 0;
+    margin-top: 8rem;
+    color: rgba(107, 105, 106, 0.8);
+    background-color: rgb(23, 23, 24);
+    font: 600 16px/18px 'Open Sans',sans-serif;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.header {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1790px;
+    top: 28px;
+    left: 56px;
+}
+
+.clearfix:after, .clearfix:before {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.additem-form {
+    top: 25px;
+}
+
+.button, .sub-button, .tab, .foot-member, .logo {
+    cursor: pointer;
+}
+
+.login-wrap {
+    width: 100%;
+    margin: auto;
+    max-width: 1125px;
+    min-height: 1400px;
+    position: relative;
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,.54),0 17px 50px 0 rgba(0,0,0,.39);
+}
+
+.login-html {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 90px 70px 50px 70px;
+    background: rgba(0,0,0,.9);
+}
+
+    .login-html .sign-in-htm,
+    .login-html .sign-up-htm {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        transition: all .4s linear;
+    }
+
+    .login-html .sign-in,
+    .login-html .sign-up,
+    .login-form .group {
+        display: none;
+    }
+
+    .login-html .tab,
+    .additem-form .group .label,
+    .additem-form .group .button,
+    .additem-form .group .file-upload {
+        text-transform: uppercase;
+    }
+
+    .login-html .tab {
+        font-size: 22px;
+        margin-right: 15px;
+        padding-bottom: 5px;
+        margin: 0 15px 10px 0;
+        display: inline-block;
+        border-bottom: 2px solid transparent;
+    }
+
+    .login-html .sign-in:checked + .tab,
+    .login-html .sign-up:checked + .tab {
+        color: #fff;
+        border-color: #e50914;
+    }
+
+.additem-form {
+    min-height: 345px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+    .additem-form .group {
+        margin-bottom: 15px;
+    }
+
+    .table {
+        width: 100%;
+    }
+
+        .additem-form .group .input,
+        .additem-form .group .button {
+            width: 100%;
+            color: #fff;
+            display: block;
+        }
+
+.additem-form .group .input,
+.additem-form .group .button,
+.additem-form .group .drop-list,
+.additem-form .group .list,
+.additem-form .group .sub-list {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.1);
+}
+
+        .additem-form .group .label {
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        .additem-form .group .button {
+            background: #e50914;
+        }
+
+.list { 
+    min-width: 800px;
+    min-height: 180px;
+    color: #fff;
+}
+
+.sub-list {
+    min-width: 486px;
+    min-height: 180px;
+    color: #fff;
+}
+
+.drop-list {
+    cursor: pointer;
+    color: #fff;
+}
+
+.calendar {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.1);
+    width: 100%;
+    color: #fff;
+    display: block;
+}
+
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .additem-form .sign-in-htm {
+    transform: rotate(0);
+}
+
+.login-html .sign-up:checked + .tab + .additem-form .sign-up-htm {
+    transform: rotate(0);
+}
+
+.day {
+    text-transform: uppercase;
+}
+
+.file-upload {
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #e50914;
+    background: #e50914;
+    color: #fff;
+    border-radius: 6px;
+    -moz-border-radius: 25px;
+    cursor: pointer;
+    text-shadow: #000 1px 1px 2px;
+    -webkit-border-radius: 25px;
+}
+
+    .file-upload:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e50914), color-stop(1, #e50914));
+        background: -moz-linear-gradient(top, #e50914 5%, #007dc1 100%);
+        background: -webkit-linear-gradient(top, #e50914 5%, #e50914 100%);
+        background: -o-linear-gradient(top, #0061a7 5%, #e50914 100%);
+        background: linear-gradient(to bottom, #e50914 5%, #e50914 100%);
+        background-color: #e50914;
+    }
+
+.file-upload {
+    height: 45px;
+}
+
+    .file-upload, .file-upload span {
+        width: 200px;
+    }
+
+        .file-upload input {
+            top: 0;
+            left: 0;
+            margin: 0;
+            opacity: 0;
+        }
+
+        .file-upload strong {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .file-upload span {
+            top: 0;
+            left: 0;
+            display: inline-block;
+            padding-top: 10px;
+        }
+
+.hr {
+    height: 2px;
+    margin: 60px 0 50px 0;
+    background: rgba(255,255,255,.2);
+}
+
+.foot-lnk {
+    padding-bottom: 2rem;
+    text-align: center;
+}
